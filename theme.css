@@ -4439,6 +4439,7 @@ body.dsm-better-nav-scrollable-expressions
 }
 
 .dcg-calculator-api-container-v1_12 .dcg-geometry-toolbar-view {
+	justify-content: center;
 	box-shadow: none;
 	background: rgb(var(--md-sys-color-surface-container-low));
 	border: none;
