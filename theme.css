@@ -5083,6 +5083,12 @@ body.dsm-better-nav-scrollable-expressions
 .dsm-text-editor-container .cm-gutters .cm-gutterElement {
 	align-content: center;
 }
+.dsm-text-editor-container
+	.cm-gutters
+	.cm-gutter:nth-child(2)
+	.cm-gutterElement {
+	padding-left: 8px;
+}
 .dsm-text-editor-container .cm-gutters .cm-activeLineGutter {
 	color: rgb(var(--md-sys-color-on-secondary-container));
 	background: rgb(var(--md-sys-color-secondary-container));
