@@ -1,3 +1,15 @@
+@font-face {
+	font-family: 'mdcg-icons';
+	src:
+		url('https://raw.githack.com/htest-311429731023102/m3e-test/main/m3e-desmos/mdcg-icons/mdcg-icons.ttf')
+			format('ttf'),
+		url('https://raw.githack.com/htest-311429731023102/m3e-test/main/m3e-desmos/mdcg-icons/mdcg-icons.woff')
+			format('woff'),
+		url('https://raw.githack.com/htest-311429731023102/m3e-test/main/m3e-desmos/mdcg-icons/mdcg-icons.woff2')
+			format('woff2');
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
 	--md-sys-color-primary: 211, 188, 253;
 	--md-sys-color-surface-tint: 211, 188, 253;
@@ -3395,7 +3407,8 @@ body.dsm-better-nav-scrollable-expressions
 	margin-top: 0;
 }
 
-.dcg-calculator-api-container-v1_12 .dcg-poi-label .dcg-pt {
+.dcg-calculator-api-container-v1_12 .dcg-poi-label .dcg-pt,
+.dcg-calculator-api-container-v1_12 .dcg-poi-label:not(.dcg-tracept) .dcg-pt {
 	top: -8px !important;
 	left: -4px !important;
 }
@@ -5181,4 +5194,17 @@ body.dsm-better-nav-scrollable-expressions
 }
 .ͼ1 .cm-foldGutter span[title='Unfold line']::after {
 	rotate: 270deg;
+}
+.dcg-calculator-api-container-v1_12 .dcg-btn-light-gray.dsm-btn {
+	height: 32px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	padding: 6px 12px;
+	margin: 8px;
+	border-radius: 16px;
+	box-shadow: none;
+	color: rgb(var(--md-sys-color-on-primary));
+	background: rgb(var(--md-sys-color-primary));
+	border: none;
 }
