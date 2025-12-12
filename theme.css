@@ -972,7 +972,8 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	.dcg-circular-icon.dcg-thick-outline
 	.dcg-icon-folder,
 .dcg-expression-icon-container,
-.dcg-calculator-api-container-v1_12 .dcg-circular-icon {
+.dcg-calculator-api-container-v1_12 .dcg-circular-icon,
+.dcg-calculator-api-container-v1_12 .dcg-ticker .dcg-icon-metronome {
 	font-size: 20px;
 }
 .dcg-calculator-api-container-v1_12
