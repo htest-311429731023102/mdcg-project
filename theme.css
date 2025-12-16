@@ -3884,6 +3884,51 @@ body.dsm-better-nav-scrollable-expressions
 	line-height: 40px;
 	color: rgb(var(--md-sys-color-on-primary-container));
 }
+.dcg-calculator-api-container-v1_12 .dcg-folder--pending-drop {
+	box-shadow: 0 0 0 2px rgb(var(--md-sys-color-on-primary-container));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-my-graphs-modal__back-button__drop-target {
+	box-shadow: 0 0 0 2px rgb(var(--md-sys-color-primary));
+	color: rgb(var(--md-sys-color-primary));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-mygraphs-drag-drop-floating-view__container {
+	padding: 8px 16px;
+	border-radius: 12px;
+	box-shadow: none;
+	color: rgb(var(--md-sys-color-on-primary));
+	background: rgb(var(--md-sys-color-primary));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-mygraphs-drag-drop-floating-view__count {
+	color: rgb(var(--md-sys-color-on-primary-container));
+	background: rgb(var(--md-sys-color-primary-container));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-mygraphs-drag-drop-floating-view__second-graph {
+	background: rgb(var(--md-sys-color-inverse-primary));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-mygraphs-drag-drop-floating-view__third-graph {
+	background: rgb(var(--md-sys-color-primary-container));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-mygraphs-drag-drop-floating-view__title {
+	font-family: Roboto, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0.15px;
+}
+.dcg-calculator-api-container-v1_12 .dcg-mygraphs-drag-drop-floating-view__img {
+	border: none;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-mygraphs-drag-drop-floating-view__count {
+	color: rgb(var(--md-sys-color-on-primary-container));
+	background: rgb(var(--md-sys-color-primary-container));
+}
 .dcg-calculator-api-container-v1_12 .dcg-my-graphs-modal__view-options {
 	gap: 12px;
 }
@@ -5257,4 +5302,38 @@ body.dsm-better-nav-scrollable-expressions
 	color: rgb(var(--md-sys-color-on-primary));
 	background: rgb(var(--md-sys-color-primary));
 	border: none;
+}
+
+.dcg-calculator-api-container-v1_12 .dcg-account-menu__user-info {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-family: Roboto, sans-serif;
+	border-bottom-color: rgb(var(--md-sys-color-outline-variant));
+	padding: 16px;
+	padding-left: 56px;
+	margin-top: -8px;
+	margin-bottom: 8px;
+}
+.dcg-calculator-api-container-v1_12 .dcg-account-menu__account-name {
+	width: 100%;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	color: rgb(var(--md-sys-color-on-surface));
+}
+.dcg-calculator-api-container-v1_12 .dcg-account-menu__account-email {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: rgb(var(--md-sys-color-on-surface-variant));
+}
+.dcg-calculator-api-container-v1_12 .dcg-account-menu__user-info::before {
+	content: '\e911';
+	position: absolute;
+	left: 8px;
+	font-family: mdcg-icons, dcg-icons-11-19-2025 !important;
+	font-size: 40px;
+	line-height: 40px;
+	color: rgb(var(--md-sys-color-outline-variant));
 }
