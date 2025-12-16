@@ -2315,16 +2315,15 @@ body.dsm-better-nav-scrollable-expressions
 	font-weight: 500;
 	color: rgb(var(--md-sys-color-primary));
 }
-/*
 .dsm-plugin-title-bar .dcg-toggle-view {
-    position: absolute;
-    top: calc(50% - 16px);
-    right: 16px;
+	position: absolute;
+	top: calc(50% - 16px);
+	right: 16px;
 }
-.dsm-plugin-section .dcg-options-menu-section-title, .dsm-plugin-section .dsm-plugin-info-body {
-    margin-right: 62px;
+.dsm-plugin-section .dcg-options-menu-section-title,
+.dsm-plugin-section .dsm-plugin-info-body {
+	margin-right: 62px;
 }
-*/
 .dcg-calculator-api-container-v1_12 .dcg-settings-container {
 	width: 360px;
 }
