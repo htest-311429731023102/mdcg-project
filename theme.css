@@ -2275,10 +2275,9 @@ body.dsm-better-nav-scrollable-expressions
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	min-height: 56px;
 	font-size: 16px;
 	line-height: 24px;
-	padding: 8px 16px;
+	padding: 16px;
 	margin: 4px 0;
 	border-radius: 4px;
 	background: rgb(var(--md-sys-color-surface));
