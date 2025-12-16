@@ -2309,7 +2309,7 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dsm-plugin-header .dsm-caret-container .dcg-icon-caret-down::before,
 .dsm-category-header .dsm-caret-container .dcg-icon-caret-down::before {
-	content: '\e975' !important;
+	content: '\e975';
 }
 .dsm-plugin-info-body a {
 	font-weight: 500;
