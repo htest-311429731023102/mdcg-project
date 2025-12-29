@@ -3379,13 +3379,24 @@ body.dsm-better-nav-scrollable-expressions
 	border: 0 solid rgb(var(--md-sys-color-on-surface-variant)) !important;
 	border-bottom-width: 1px !important;
 }
+.dcg-calculator-api-container-v1_12 .dcg-multi-select-label-menu {
+	padding: 24px !important;
+	border-radius: 28px;
+	background: rgb(var(--md-sys-color-surface-container));
+}
 .dcg-save-dialog__title-input {
 	min-height: 56px;
 }
 .dcg-label-input.dcg-focus-visible,
-.dcg-save-dialog__title-input.dcg-focus-visible {
+.dcg-save-dialog__title-input.dcg-focus-visible,
+.dcg-calculator-api-container-v1_12
+	.dcg-multi-select-label-menu
+	.dcg-label-container
+	input:focus:not([disabled]) {
+	box-shadow: none !important;
 	background: rgb(var(--md-sys-color-surface-container-highest)) !important;
 	border: 0 solid rgb(var(--md-sys-color-primary)) !important;
+	border-color: rgb(var(--md-sys-color-primary));
 	border-bottom-width: 3px !important;
 }
 .dcg-calculator-api-container-v1_12 .dcg-container .dcg-label-container {
