@@ -72,8 +72,10 @@ body,
 html {
 	font-family: Roboto, Sans-Serif !important;
 }
-.dcg-calculator-api-container-v1_12 [class^='dcg-icon-'],
-.dcg-calculator-api-container-v1_12 [class*=' dcg-icon-'] {
+.dcg-calculator-api-container-v1_12
+	[class^='dcg-icon-']:not(.dcg-shared-product-icon),
+.dcg-calculator-api-container-v1_12
+	[class*=' dcg-icon-']:not(.dcg-shared-product-icon) {
 	font-family: mdcg-icons, dcg-icons-11-19-2025 !important;
 }
 ::-webkit-scrollbar {
