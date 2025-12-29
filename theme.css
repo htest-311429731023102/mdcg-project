@@ -5403,3 +5403,48 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12 .dcg-current-tool-menu__tool-text {
 	display: none;
 }
+
+.dcg-calculator-api-container-v1_12 .dcg-hotkeys-dialog {
+	font-family: Roboto, sans-serif;
+}
+.dcg-calculator-api-container-v1_12 .dcg-hotkeys-header {
+	flex-direction: column;
+	background-color: rgb(var(--md-sys-color-surface-container-low));
+}
+.dcg-calculator-api-container-v1_12 .dcg-hotkeys-title {
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 36px;
+	color: rgb(var(--md-sys-color-on-surface));
+}
+.dcg-calculator-api-container-v1_12 .dcg-hotkey-container .dcg-shortcuts-table {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	color: rgb(var(--md-sys-color-on-surface-variant));
+}
+.dcg-calculator-api-container-v1_12 .dcg-hotkey-section-header {
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 28px;
+	color: rgb(var(--md-sys-color-secondary));
+}
+.dcg-calculator-api-container-v1_12 table.dcg-shortcuts-table tr {
+	border-color: rgb(var(--md-sys-color-outline-variant));
+}
+.dcg-calculator-api-container-v1_12 table.dcg-shortcuts-table tr td {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: rgb(var(--md-sys-color-on-surface));
+}
+.dcg-calculator-api-container-v1_12 table.dcg-shortcuts-table .dcg-key-command {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	padding: 4px 8px;
+	border-radius: 12px;
+	color: rgb(var(--md-sys-color-on-primary-container));
+	background: rgb(var(--md-sys-color-primary-container));
+	border: none;
+}
