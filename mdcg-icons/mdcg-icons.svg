@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
-<metadata>Copyright (C) 2025 by original authors @ fontello.com</metadata>
+<metadata>Copyright (C) 2026 by original authors @ fontello.com</metadata>
 <defs>
 <font id="mdcg-icons" horiz-adv-x="1000" >
 <font-face font-family="mdcg-icons" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
@@ -99,6 +99,8 @@
 <glyph glyph-name="undo" unicode="&#xe262;" d="M511 496c-110 0-210-41-287-108l-150 150v-375h375l-151 150c58 49 131 79 213 79 148 0 273-97 317-229l99 32c-58 175-222 301-416 301z" horiz-adv-x="1000" />
 
 <glyph glyph-name="public" unicode="&#xe263;" d="M500 767c-230 0-417-187-417-417 0-230 187-417 417-417 230 0 417 187 417 417 0 230-187 417-417 417z m-333-417c0 25 3 50 8 74l200-199v-42c0-45 37-83 83-83v-80c-164 20-291 160-291 330z m578-225c-10 34-41 58-79 58h-41v125c0 23-19 42-42 42h-250v83h83c23 0 42 19 42 42v83h83c46 0 84 38 84 84v17c122-49 208-169 208-309 0-87-33-166-88-225z" horiz-adv-x="1000" />
+
+<glyph glyph-name="tools-wrench" unicode="&#xe264;" d="M803 25l29 29-332 333c13 15 23 34 31 54 7 20 11 41 11 63 0 52-19 96-55 133-36 36-81 54-133 54h-10l128-128-177-176-128 128v-12c0-52 18-96 54-132 37-36 81-54 133-54 22 0 43 3 63 11 20 7 38 17 54 30l332-333z m-58-59l-288 287c-16-6-32-11-49-14-17-4-35-6-53-6-75 0-139 27-192 79-52 52-79 117-79 192 0 29 5 58 13 85 9 27 22 52 38 75l160-160 59 59-159 160c23 17 49 30 76 39 27 9 55 13 83 13 76 0 140-26 192-79 53-52 79-116 79-192 0-18-2-36-5-53-4-18-9-35-16-51l287-286c16-16 24-36 24-59 1-24-7-43-23-59l-28-29c-16-17-36-26-59-26-24 0-43 8-60 25z" horiz-adv-x="1000" />
 
 <glyph glyph-name="keyboard-arrow-down" unicode="&#xe266;" d="M500 208l-250 250 58 59 192-192 192 192 58-59-250-250z" horiz-adv-x="1000" />
 
