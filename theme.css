@@ -859,11 +859,79 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	.dcg-mq-root-block {
 	color: rgb(var(--md-sys-color-on-primary-container)) !important;
 }
+
 .dcg-calculator-api-container-v1_12 .dcg-exppanel .dcg-expressionitem .dcg-tab {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 40px;
+	padding: 4px;
+	margin: 4px;
+	border-radius: 0 8px 8px 0;
 	background: transparent;
 	border-right: none;
+	transition:
+		border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9),
+		background 200ms cubic-bezier(0.34, 0.8, 0.34, 1);
 }
-
+.dcg-calculator-api-container-v1_12
+	.dcg-exppanel
+	.dcg-expressionitem
+	.dcg-tab.dcg-hovered {
+	background: rgba(var(--md-sys-color-on-surface), 0.08);
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-exppanel
+	.dcg-expressionitem.dcg-selected
+	.dcg-tab.dcg-hovered {
+	border-radius: 8px;
+	background: rgba(var(--md-sys-color-on-primary-container), 0.08);
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-exppanel
+	.dcg-expressionitem.dcg-hovered
+	.dcg-tab {
+	border-radius: 12px 8px 8px 12px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-exppanel
+	.dcg-expressionitem:first-child
+	.dcg-tab,
+.dcg-calculator-api-container-v1_12
+	.dcg-exppanel
+	*:not(.dcg-do-not-blur.dcg-expressionitem.dcg-inFolder)
+	+ .dcg-do-not-blur.dcg-expressionitem.dcg-inFolder
+	.dcg-tab {
+	border-top-left-radius: 20px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-exppanel
+	.dcg-expressionitem:last-child
+	.dcg-tab,
+.dcg-calculator-api-container-v1_12
+	.dcg-exppanel
+	.dcg-do-not-blur.dcg-expressionitem.dcg-inFolder:has(
+		+ *:not(.dcg-do-not-blur.dcg-expressionitem.dcg-inFolder)
+	)
+	.dcg-tab {
+	border-bottom-left-radius: 20px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-exppanel
+	.dcg-expressionitem
+	.dcg-tab
+	.dcg-num {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	color: rgb(var(--md-sys-color-on-surface-variant));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-exppanel
+	.dcg-expressionitem
+	.dcg-tab-interior {
+	width: -webkit-fill-available;
+}
 .dcg-calculator-api-container-v1_12 .dcg-circular-icon {
 	display: flex;
 	align-items: center;
@@ -941,13 +1009,22 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 .dcg-calculator-api-container-v1_12 .dcg-circular-icon {
 	width: 32px;
 	height: 40px;
+	left: unset;
 	line-height: 40px;
+	margin: 0;
 	border-radius: 16px;
 	margin-top: unset;
 	transition:
 		border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9),
 		color 200ms cubic-bezier(0.34, 0.8, 0.34, 1),
 		background 200ms cubic-bezier(0.34, 0.8, 0.34, 1);
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-expressionitem.dcg-expressiontext
+	.dcg-icon-text {
+	top: calc(50% - 10px);
+	left: unset;
+	margin: 0;
 }
 .dcg-calculator-api-container-v1_12 .dcg-circular-icon.dcg-hidden {
 	border-radius: 12px;
@@ -1046,19 +1123,6 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 .dcg-calculator-api-container-v1_12
 	.dcg-smart-textarea-container
 	textarea.dcg-smart-textarea::placeholder {
-	color: rgb(var(--md-sys-color-on-surface-variant));
-}
-.dcg-calculator-api-container-v1_12 .dcg-exppanel .dcg-expressionitem .dcg-tab {
-	padding: 4px 16px;
-}
-.dcg-calculator-api-container-v1_12
-	.dcg-exppanel
-	.dcg-expressionitem
-	.dcg-tab
-	.dcg-num {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 20px;
 	color: rgb(var(--md-sys-color-on-surface-variant));
 }
 
@@ -1622,6 +1686,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12 .dcg-right-pillbox-elements i {
 	font-size: 16px !important;
 }
+.dcg-calculator-api-container-v1_12 .dcg-pillbox-view .dcg-icon-wrench,
 .dcg-calculator-api-container-v1_12
 	.dcg-left-pillbox-elements
 	.dcg-zoominout-pillbox
@@ -1637,7 +1702,8 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-right-pillbox-elements
 	.dcg-popover-interior
-	i {
+	i,
+.dcg-calculator-api-container-v1_12 .dcg-pillbox-view .dcg-icon-home {
 	font-size: 24px !important;
 }
 .dcg-calculator-api-container-v1_12
