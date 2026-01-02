@@ -902,7 +902,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	*:not(.dcg-do-not-blur.dcg-expressionitem.dcg-inFolder)
 	+ .dcg-do-not-blur.dcg-expressionitem.dcg-inFolder
 	.dcg-tab {
-	border-top-left-radius: 20px;
+	border-top-left-radius: 20px !important;
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-exppanel
@@ -914,7 +914,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 		+ *:not(.dcg-do-not-blur.dcg-expressionitem.dcg-inFolder)
 	)
 	.dcg-tab {
-	border-bottom-left-radius: 20px;
+	border-bottom-left-radius: 20px !important;
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-exppanel
