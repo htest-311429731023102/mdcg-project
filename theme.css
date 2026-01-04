@@ -808,6 +808,12 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	.dcg-expressionitem.dcg-inFolder.dcg-dragging {
 	margin: 0 16px;
 }
+.dcg-calculator-api-container-v1_12
+	.dcg-exppanel
+	.dcg-expressionitem:has(.dcg-tooltipped-error-container) {
+	padding: 11px;
+	border: 1px solid rgb(var(--md-sys-color-error));
+}
 @keyframes mdcg-newExpression {
 	0% {
 		scale: 0 1;
