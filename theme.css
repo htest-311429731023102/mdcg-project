@@ -3951,12 +3951,12 @@ body.dsm-better-nav-scrollable-expressions
 	content: none;
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-folder__thumbnail:nth-child(3)
+	.dcg-folder__thumbnail:nth-child(4)
 	~ .dcg-folder__thumbnail {
 	counter-increment: count;
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-folder__thumbnail:nth-child(4)
+	.dcg-folder__thumbnail:nth-child(5)
 	~ .dcg-folder__thumbnail:last-child {
 	display: flex;
 	justify-content: center;
@@ -3969,26 +3969,26 @@ body.dsm-better-nav-scrollable-expressions
 	backdrop-filter: blur(4px);
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-folder__thumbnail:nth-child(4)
+	.dcg-folder__thumbnail:nth-child(5)
 	~ .dcg-folder__thumbnail:last-child
 	.dcg-graph-thumbnail {
 	display: none;
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-folder__thumbnail:nth-child(4)
+	.dcg-folder__thumbnail:nth-child(5)
 	~ .dcg-folder__thumbnail:last-child::before {
 	content: '+';
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-folder__thumbnail:nth-child(4)
+	.dcg-folder__thumbnail:nth-child(5)
 	~ .dcg-folder__thumbnail:last-child::after {
 	content: counter(count);
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-folder__thumbnail:nth-child(4)
+	.dcg-folder__thumbnail:nth-child(5)
 	~ .dcg-folder__thumbnail:last-child::before,
 .dcg-calculator-api-container-v1_12
-	.dcg-folder__thumbnail:nth-child(4)
+	.dcg-folder__thumbnail:nth-child(5)
 	~ .dcg-folder__thumbnail:last-child::after {
 	font-size: 32px;
 	font-weight: 500;
