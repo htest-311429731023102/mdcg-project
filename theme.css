@@ -3586,12 +3586,15 @@ body.dsm-better-nav-scrollable-expressions
 	left: 0;
 	background: rgba(var(--md-sys-color-scrim), 0.32);
 }
+.dcg-calculator-api-container-v1_12
+	.dcg-shared-modal-fullscreen
+	.dcg-shared-modal-dialog {
+	background: none;
+}
 .dcg-calculator-api-container-v1_12 .dcg-shared-modal-cover .dcg-shared-modal {
 	background: none;
 }
-.dcg-calculator-api-container-v1_12
-	.dcg-shared-modal-cover
-	.dcg-shared-modal-contents-wrapper {
+.dcg-calculator-api-container-v1_12 .dcg-shared-modal-box {
 	padding: 0 24px 24px;
 	border-radius: 28px;
 	box-shadow: none;
