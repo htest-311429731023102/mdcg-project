@@ -3586,9 +3586,7 @@ body.dsm-better-nav-scrollable-expressions
 	left: 0;
 	background: rgba(var(--md-sys-color-scrim), 0.32);
 }
-.dcg-calculator-api-container-v1_12
-	.dcg-shared-modal-fullscreen
-	.dcg-shared-modal-dialog {
+.dcg-calculator-api-container-v1_12 .dcg-shared-modal-dialog {
 	background: none;
 }
 .dcg-calculator-api-container-v1_12 .dcg-shared-modal-cover .dcg-shared-modal {
@@ -4100,8 +4098,7 @@ body.dsm-better-nav-scrollable-expressions
 	padding-right: 36px;
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-shared-modal-cover
-	.dcg-shared-close-cross-container {
+	.dcg-tooltip-hit-area-container:has(.dcg-shared-close-cross) {
 	top: 16px;
 	right: 16px;
 	z-index: 1;
