@@ -254,6 +254,9 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	transform-origin: left;
 	animation: 300ms dcg-splitButton-scaleOut cubic-bezier(0.05, 0.7, 0.1, 1);
 }
+.dcg-calculator-api-container-v1_12 .save-btn-container .dcg-save-button.dcg-dropdown-caret .dcg-graph-actions-dropdown-anchor {
+	padding: 0;
+}
 .save-btn-container .dcg-save-button.dcg-dropdown-caret i {
 	display: block;
 	width: 20px;
