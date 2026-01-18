@@ -4,7 +4,7 @@
 
 hai ! :3
 
-this is my little project thing that gives desmos a slightly more "[material expressive 3](https://youtu.be/n17dnMChX14)" style similar to google's design thing
+this is my little project thing that gives desmos a slightly more "[material 3 expressive](https://youtu.be/n17dnMChX14)" style similar to google's design thing
 
 i started making this sometime in august 2025 and it is because of all the support and feedback from  the desmos discord server that im able to continue this project to keep improving it to try to make it better \<3 
 
