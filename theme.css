@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
 :root {
 	--md-sys-color-primary: 211, 188, 253;
 	--md-sys-color-surface-tint: 211, 188, 253;
@@ -70,7 +72,7 @@
 
 body,
 html {
-	font-family: Roboto, Sans-Serif !important;
+	font-family: 'Google Sans', Sans-Serif !important;
 }
 .dcg-calculator-api-container-v1_12
 	[class^='dcg-icon-']:not(.dcg-shared-product-icon),
@@ -342,7 +344,7 @@ button.dcg-unstyled-button.dcg-action-opendrawer.dcg-header-btn {
 	.dcg-graph-title {
 	height: unset;
 	padding: 0 16px 0 0;
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 28px;
@@ -463,7 +465,7 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 }
 .save-btn-container.save-btn-container
 	.dcg-save-button:not(.dcg-dropdown-caret) {
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
@@ -500,7 +502,7 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	content: none !important;
 }
 .dsm-set-primary-color.dcg-sliding-interior .dcg-dropdown-choice {
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
@@ -518,7 +520,7 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 .dcg-calculator-api-container-v1_12 .dcg-new-my-graphs-item__button {
 	gap: 8px;
 	height: 56px !important;
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 24px;
@@ -780,7 +782,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	width: 200px;
 	height: fit-content;
 	padding: 8px 12px;
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 16px !important;
 	font-weight: 400;
 	line-height: 24px !important;
@@ -828,7 +830,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	color: rgb(var(--md-sys-color-on-surface-variant));
 }
 .dcg-sliding-interior .dcg-popover .dcg-popover-title {
-	font-family: roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 28px;
@@ -928,7 +930,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 .dcg-calculator-api-container-v1_12
 	.dcg-constructions-count-link
 	.dcg-construction-count {
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	max-width: 34px;
 	height: fit-content;
 	font-size: 11px;
@@ -1010,14 +1012,6 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	padding: 11px;
 	border: 1px solid rgb(var(--md-sys-color-error));
 }
-@keyframes mdcg-newExpression {
-	0% {
-		scale: 0 1;
-	}
-}
-.dcg-expressionitem {
-	animation: 300ms 1 cubic-bezier(0.05, 0.7, 0.1, 1) dcg-newExpression;
-}
 
 .dcg-exppanel .dcg-expressionitem:not(.dcg-new-expression).dcg-hovered {
 	border-radius: 16px;
@@ -1026,11 +1020,11 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 .dcg-expression-bottom .dcg-label-container,
 .dcg-calculator-api-container-v1_12 .dcg-create-sliders .dcg-msg,
 .dcg-image-input-name {
-	font-family: roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	color: rgb(var(--md-sys-color-on-surface)) !important;
 }
 .dcg-calculator-api-container-v1_12 .dcg-action-info {
-	font-family: roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	color: rgb(var(--md-sys-color-on-surface-variant));
 }
 
@@ -1501,7 +1495,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	.dcg-mq-math-mode
 	.dcg-mq-root-block
 	* {
-	font-family: roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 20px;
 	font-style: normal;
 }
@@ -2102,7 +2096,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-ticker-label,
 .dcg-editable-mathquill-container.dcg-action-frequency {
 	color: rgb(var(--md-sys-color-on-secondary-container));
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 }
 .dcg-calculator-api-container-v1_12 .dcg-ticker .dcg-ticker-settings-internal {
 	overflow: visible;
@@ -2185,7 +2179,7 @@ body.dsm-better-nav-scrollable-expressions
 	color: rgb(var(--md-sys-color-primary)) !important;
 	background: rgba(var(--md-sys-color-primary), 0);
 	padding: 6px 12px;
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
@@ -2273,7 +2267,7 @@ body.dsm-better-nav-scrollable-expressions
 	height: 40px;
 	padding: 10px 16px;
 	margin: 4px;
-	font-family: roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 20px;
@@ -2412,7 +2406,7 @@ body.dsm-better-nav-scrollable-expressions
 	width: 100%;
 	height: unset;
 	min-width: unset !important;
-	font-family: roboto, Sans-Serif !important;
+	font-family: 'Google Sans', Sans-Serif !important;
 	font-size: 14px !important;
 	font-weight: 500;
 	line-height: 20px !important;
@@ -2511,7 +2505,7 @@ body.dsm-better-nav-scrollable-expressions
 	margin-right: 0;
 }
 .dcg-dropdown-popover__interior {
-	font-family: Roboto, sans-serif;
+	font-family: 'Google Sans', sans-serif;
 	font-weight: 400;
 	padding: 8px 0 !important;
 	border-radius: 4px !important;
@@ -2529,7 +2523,7 @@ body.dsm-better-nav-scrollable-expressions
 .account-name,
 .account-email {
 	padding: 8px 12px !important;
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
@@ -2579,7 +2573,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-my-graphs-modal
 	.dcg-dropdown-popover__interior {
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
@@ -2630,7 +2624,7 @@ body.dsm-better-nav-scrollable-expressions
 	height: 40px;
 	width: -webkit-fill-available;
 	margin: 0 !important;
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
@@ -3177,7 +3171,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-tooltip-message-container
 	.dcg-tooltip-message {
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 16px;
@@ -3540,7 +3534,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-label-input,
 .dcg-save-dialog__title-input {
 	height: fit-content;
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 16px !important;
 	font-weight: 400;
 	line-height: 24px;
@@ -3644,7 +3638,7 @@ body.dsm-better-nav-scrollable-expressions
 	justify-content: center;
 }
 .dcg-calculator-api-container-v1_12 .dcg-my-graphs-modal__heading {
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 28px;
@@ -3818,7 +3812,7 @@ body.dsm-better-nav-scrollable-expressions
 	.dcg-dot-dot-dropdown,
 .dcg-calculator-api-container-v1_12 .dcg-folder .dcg-folder__name,
 .dcg-calculator-api-container-v1_12 .dcg-folder .dcg-dot-dot-dropdown {
-	font-family: Roboto;
+	font-family: 'Google Sans';
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
@@ -3876,7 +3870,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-saved-graphs-tile__image-footer
 	> *:first-child {
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
@@ -4051,7 +4045,7 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-mygraphs-drag-drop-floating-view__title {
-	font-family: Roboto, sans-serif;
+	font-family: 'Google Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 24px;
@@ -4101,7 +4095,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-product-filter__clear-filter-container
 	.dcg-btn-gray-outline {
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 24px;
@@ -4150,7 +4144,7 @@ body.dsm-better-nav-scrollable-expressions
 	.dcg-text-input__input {
 	width: -webkit-fill-available;
 	height: -webkit-fill-available;
-	font-family: Roboto;
+	font-family: 'Google Sans';
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
@@ -4197,7 +4191,7 @@ body.dsm-better-nav-scrollable-expressions
 	display: none;
 }
 .dcg-calculator-api-container-v1_12 .dcg-my-graphs-modal-empty-state {
-	font-family: Roboto;
+	font-family: 'Google Sans';
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 28px;
@@ -4217,7 +4211,7 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-btn-gray-outline.dcg-selected-graphs-actions__clear-selection {
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 24px;
@@ -4319,7 +4313,7 @@ body.dsm-better-nav-scrollable-expressions
 	padding: 24px 24px 0 24px;
 }
 .dcg-calculator-api-container-v1_12 .dcg-save-dialog__heading {
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 32px;
@@ -4335,7 +4329,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-save-dialog__contents
 	.dcg-btn-blue.dcg-action-save {
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
@@ -4777,7 +4771,7 @@ body.dsm-better-nav-scrollable-expressions
 	.dcg-tool-dropdown
 	i.dcg-hovered {
 	top: 100%;
-	color: rgb(var(--md-sys-color-secondary));
+	color: rgb(var(--md-sys-color-secondary)) !important;
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-geo-basic-tools
@@ -4861,6 +4855,12 @@ body.dsm-better-nav-scrollable-expressions
 	padding: 0 2px 0 0;
 	margin: 0 10px;
 	border-radius: 20px;
+	background: rgb(var(--md-sys-color-surface-container-high));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-navigate-back.dcg-navigate-back__no-right-border
+	.dcg-icon-chevron-left::before {
+	content: '\e259';
 }
 .dcg-calculator-api-container-v1_12 .dcg-navigate-back i,
 .dcg-calculator-api-container-v1_12 .dcg-navigate-back.dcg-hovered i {
@@ -4946,6 +4946,16 @@ body.dsm-better-nav-scrollable-expressions
 	height: 40px;
 	margin: 0 10px;
 	border-radius: 24px;
+	border: none;
+	transition:
+		border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9),
+		color 200ms cubic-bezier(0.34, 0.8, 0.34, 1),
+		background 200ms cubic-bezier(0.34, 0.8, 0.34, 1);
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-multi-select-header
+	.dcg-multi-select-icon-button {
+	color: rgb(var(--md-sys-color-on-surface));
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-multi-select-header
@@ -4961,7 +4971,9 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-multi-select-header
 	.dcg-toolbar-dropdown-button.dcg-menu-open {
-	background: rgb(var(--md-sys-color-secondary-container));
+	border-radius: 12px;
+	color: rgb(var(--md-sys-color-on-primary));
+	background: rgb(var(--md-sys-color-primary));
 	border: none;
 }
 .dcg-calculator-api-container-v1_12
@@ -5044,6 +5056,13 @@ body.dsm-better-nav-scrollable-expressions
 	.dcg-label-button-icon {
 	color: rgb(var(--md-sys-color-on-tertiary));
 	background: rgb(var(--md-sys-color-tertiary));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-multi-select-header
+	.dcg-toolbar-dropdown-button.dcg-menu-open
+	.dcg-label-button-icon {
+	color: rgb(var(--md-sys-color-on-primary-container));
+	background: rgb(var(--md-sys-color-primary-container));
 }
 
 #intellisense-container {
@@ -5140,7 +5159,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-shared-modal-cover
 	.dcg-shared-left-align-title {
-	font-family: Roboto, Sans-Serif;
+	font-family: 'Google Sans', Sans-Serif;
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 28px;
@@ -5163,7 +5182,7 @@ body.dsm-better-nav-scrollable-expressions
 	.dcg-shared-navigation-tabs
 	.dcg-shared-tab-gray-underline {
 	height: 48px;
-	font-family: Roboto, sans-serif;
+	font-family: 'Google Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 24px;
@@ -5220,7 +5239,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-shared-account-settings-dialog
 	.dcg-shared-content-container {
-	font-family: Roboto, sans-serif;
+	font-family: 'Google Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 24px;
@@ -5443,7 +5462,7 @@ body.dsm-better-nav-scrollable-expressions
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	font-family: Roboto, sans-serif;
+	font-family: 'Google Sans', sans-serif;
 	border-bottom-color: rgb(var(--md-sys-color-outline-variant));
 	padding: 16px;
 	padding-left: 56px;
@@ -5474,7 +5493,7 @@ body.dsm-better-nav-scrollable-expressions
 }
 
 .dcg-calculator-api-container-v1_12 .dcg-hotkeys-dialog {
-	font-family: Roboto, sans-serif;
+	font-family: 'Google Sans', sans-serif;
 }
 .dcg-calculator-api-container-v1_12 .dcg-hotkeys-header {
 	flex-direction: column;
@@ -5571,7 +5590,7 @@ body.dsm-better-nav-scrollable-expressions
 	content: attr(aria-label);
 	display: block;
 	height: fit-content;
-	font-family: Roboto, sans-serif;
+	font-family: 'Google Sans', sans-serif;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
