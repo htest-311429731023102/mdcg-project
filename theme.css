@@ -1796,6 +1796,7 @@ body.dsm-better-nav-scrollable-expressions
 	border-radius: 32px;
 	box-shadow: var(--elevation-3);
 	background: rgb(var(--md-sys-color-primary-container));
+	z-index: 1;
 }
 .dcg-calculator-api-container-v1_12 .dcg-group-horizontal {
 	height: fit-content;
