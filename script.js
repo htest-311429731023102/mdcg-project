@@ -1,123 +1,114 @@
-const darkMode = true;
+const variant = 'dark'; // 'light', 'light-mc', 'light-hc', 'dark', 'dark-mc', 'dark-hc'
 
 (async () => {
-	const {
-		argbFromHex,
-		hexFromArgb,
-		themeFromSourceColor,
-		redFromArgb,
-		greenFromArgb,
-		blueFromArgb,
-	} = await import(
-		'https://esm.sh/@material/material-color-utilities?exports=argbFromHex,themeFromSourceColor,redFromArgb,greenFromArgb,blueFromArgb'
-	);
+	const MCU = await import('https://esm.sh/@material/material-color-utilities');
 
-	const getMissingColorMap = (theme, mode) => {
-		const { primary, secondary, tertiary, neutral } = theme.palettes;
+	const rgbStr = (argb) =>
+		`${MCU.redFromArgb(argb)}, ${MCU.greenFromArgb(argb)}, ${MCU.blueFromArgb(argb)}`;
 
-		const lightColors = new Map([
-			['--md-sys-color-primary-fixed', rgbFromArgb(primary.tone(90))],
-			['--md-sys-color-primary-fixed-dim', rgbFromArgb(neutral.tone(80))],
-			['--md-sys-color-on-primary-fixed', rgbFromArgb(primary.tone(10))],
-			['--md-sys-color-on-primary-fixed-variant', rgbFromArgb(primary.tone(30))],
-			['--md-sys-color-secondary-fixed', rgbFromArgb(secondary.tone(90))],
-			['--md-sys-color-secondary-fixed-dim', rgbFromArgb(secondary.tone(80))],
-			['--md-sys-color-on-secondary-fixed', rgbFromArgb(secondary.tone(10))],
-			['--md-sys-color-on-secondary-fixed-variant', rgbFromArgb(secondary.tone(30))],
-			['--md-sys-color-tertiary-fixed', rgbFromArgb(tertiary.tone(90))],
-			['--md-sys-color-tertiary-fixed-dim', rgbFromArgb(tertiary.tone(80))],
-			['--md-sys-color-on-tertiary-fixed', rgbFromArgb(tertiary.tone(10))],
-			['--md-sys-color-on-tertiary-fixed-variant', rgbFromArgb(tertiary.tone(30))],
-			['--md-sys-color-surface', rgbFromArgb(neutral.tone(98))],
-			['--md-sys-color-surface-dim', rgbFromArgb(neutral.tone(87))],
-			['--md-sys-color-surface-bright', rgbFromArgb(neutral.tone(98))],
-			['--md-sys-color-surface-container-lowest',
-				rgbFromArgb(neutral.tone(100))],
-			['--md-sys-color-surface-container-low', rgbFromArgb(neutral.tone(96))],
-			['--md-sys-color-surface-container', rgbFromArgb(neutral.tone(94))],
-			['--md-sys-color-surface-container-high', rgbFromArgb(neutral.tone(92))],
-			['--md-sys-color-surface-container-highest', rgbFromArgb(neutral.tone(90))],
-		]);
+	function setTheme(sourceColor, variant = 'dark', suffix = '') {
+		const hct = MCU.Hct.fromInt(MCU.argbFromHex(sourceColor));
+		const target = document.documentElement;
 
-		const darkColors = new Map([
-			['--md-sys-color-surface', rgbFromArgb(neutral.tone(6))],
-			['--md-sys-color-surface-dim', rgbFromArgb(neutral.tone(6))],
-			['--md-sys-color-surface-bright', rgbFromArgb(neutral.tone(24))],
-			['--md-sys-color-surface-container-lowest', rgbFromArgb(neutral.tone(4))],
-			['--md-sys-color-surface-container-low', rgbFromArgb(neutral.tone(10))],
-			['--md-sys-color-surface-container', rgbFromArgb(neutral.tone(12))],
-			['--md-sys-color-surface-container-high', rgbFromArgb(neutral.tone(17))],
-			['--md-sys-color-surface-container-highest', rgbFromArgb(neutral.tone(22))],
-		]);
+		const isDark = variant.startsWith('dark');
+		let contrastLevel = 0.0;
+		if (variant.endsWith('-mc')) contrastLevel = 0.5;
+		if (variant.endsWith('-hc')) contrastLevel = 1.0;
 
-		if (mode === 'light') {
-			return lightColors;
-		} else {
-			return new Map([...lightColors.entries(), ...darkColors.entries()]);
-		}
-	};
+		const scheme = new MCU.DynamicScheme({
+			sourceColorHct: hct,
+			variant: MCU.Variant.VIBRANT,
+			isDark: isDark,
+			contrastLevel: contrastLevel,
 
-	function rgbFromArgb(value) {
-		return `${redFromArgb(value)}, ${greenFromArgb(value)}, ${blueFromArgb(value)}`;
-	}
+			primaryPalette: MCU.TonalPalette.fromHueAndChroma(
+				hct.hue,
+				hct.chroma * 0.8
+			),
+			secondaryPalette: MCU.TonalPalette.fromHueAndChroma(
+				hct.hue,
+				hct.chroma * 0.4
+			),
+			tertiaryPalette: MCU.TonalPalette.fromHueAndChroma(
+				hct.hue + 60.0,
+				hct.chroma * 0.6
+			),
 
-	function setSchemeProperties(target, scheme, suffix = '', name = '') {
-		for (const [key, value] of Object.entries(scheme.toJSON())) {
-			const token = key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
-			const color = rgbFromArgb(value);
-			target.style.setProperty(
-				`--md-sys-color${name}-${token}${suffix}`,
-				color
-			);
-		}
-	}
+			neutralPalette: MCU.TonalPalette.fromHueAndChroma(
+				hct.hue,
+				Math.min(hct.chroma / 10, 8)
+			),
+			neutralVariantPalette: MCU.TonalPalette.fromHueAndChroma(
+				hct.hue,
+				Math.min(hct.chroma / 5, 16)
+			),
+		});
 
-	function applyTheme(theme, options, name = '') {
-		const target = options?.target || document.body;
-		const isDark = options?.dark ?? false;
-		const scheme = isDark ? theme.schemes.dark : theme.schemes.light;
-		setSchemeProperties(target, scheme, '', name);
-		if (options?.brightnessSuffix) {
-			setSchemeProperties(target, theme.schemes.dark, '-dark', name);
-			setSchemeProperties(target, theme.schemes.light, '-light', name);
-		}
-		if (options?.paletteTones) {
-			const tones = options?.paletteTones ?? [];
-			for (const [key, palette] of Object.entries(theme.palettes)) {
-				const paletteKey = key
-					.replace(/([a-z])([A-Z])/g, '$1-$2')
-					.toLowerCase();
-				for (const tone of tones) {
-					const token = `--md-ref-palette-${paletteKey}-${paletteKey}${tone}`;
-					const color = hexFromArgb(palette.tone(tone));
-					target.style.setProperty(token, color);
-				}
+		const tokens = [
+			'primary',
+			'on-primary',
+			'primary-container',
+			'on-primary-container',
+			'secondary',
+			'on-secondary',
+			'secondary-container',
+			'on-secondary-container',
+			'tertiary',
+			'on-tertiary',
+			'tertiary-container',
+			'on-tertiary-container',
+			'error',
+			'on-error',
+			'error-container',
+			'on-error-container',
+			'background',
+			'on-background',
+			'surface',
+			'on-surface',
+			'surface-variant',
+			'on-surface-variant',
+			'outline',
+			'outline-variant',
+			'shadow',
+			'scrim',
+			'inverse-surface',
+			'inverse-on-surface',
+			'inverse-primary',
+			'surface-dim',
+			'surface-bright',
+			'surface-container-lowest',
+			'surface-container-low',
+			'surface-container',
+			'surface-container-high',
+			'surface-container-highest',
+		];
+
+		tokens.forEach((token) => {
+			const camelToken = token.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+			if (MCU.MaterialDynamicColors[camelToken]) {
+				const argb = MCU.MaterialDynamicColors[camelToken].getArgb(scheme);
+				target.style.setProperty(
+					`--md-sys-color-${token}${suffix}`,
+					rgbStr(argb)
+				);
 			}
-		}
+		});
 	}
 
-	function setTheme(sourceColor, dark, name = '') {
-		const theme = themeFromSourceColor(argbFromHex(sourceColor));
-
-		// Check if the user has dark mode turned on
-		// const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-		// Apply the theme to the body by updating custom properties for material tokens
-		applyTheme(theme, { target: document.documentElement, dark: dark }, name);
-		const missing = getMissingColorMap(theme, dark ? 'dark' : 'light');
-		missing.forEach((color, token) =>
-			document.documentElement.style.setProperty(token, color)
-		);
-	}
 	window.setTheme = setTheme;
+
 	let color = '#68548E';
 	setInterval(() => {
-		const dsmColor = DSM?.pluginSettings?.['set-primary-color']?.primaryColor;
+		const dsmColor =
+			window.DSM?.pluginSettings?.['set-primary-color']?.primaryColor;
 		if (dsmColor && dsmColor !== color) {
 			color = dsmColor;
-			setTheme(color, darkMode);
+			setTheme(color, variant);
 		}
-	}, 10);
-	setTheme('#358f3c', darkMode, '-graphing');
-	setTheme('#530d82', darkMode, '-geometry');
-	setTheme('#bd469b', darkMode, '-3d');
+	}, 100);
+
+	setTheme(color, variant);
+	setTheme('#358f3c', variant, '-graphing');
+	setTheme('#530d82', variant, '-geometry');
+	setTheme('#bd469b', variant, '-3d');
 })();
