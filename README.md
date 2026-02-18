@@ -20,7 +20,7 @@ im using the [User JavaScript and CSS](https://chromewebstore.google.com/detail/
 
 for the css you can paste this code in the css section
 ```css
-@font-face {font-family: 'mdcg-icons';src:url('https://raw.githack.com/htest-311429731023102/mdcg-project/main/mdcg-icons/mdcg-icons.woff') format('woff'),url('https://raw.githack.com/htest-311429731023102/mdcg-project/main/mdcg-icons/mdcg-icons.woff2')format('woff2');}
+@font-face {font-family: 'mdcg-icons';src:url('https://raw.githack.com/htest-311429731023102/mdcg-project/beta-B/mdcg-icons/mdcg-icons.woff') format('woff'),url('https://raw.githack.com/htest-311429731023102/mdcg-project/beta-B/mdcg-icons/mdcg-icons.woff2')format('woff2');}
 @import url('https://raw.githack.com/htest-311429731023102/mdcg-project/main/theme.css');
 ```
 
