@@ -8,7 +8,7 @@ this is my little project thing that gives desmos a slightly more "[material 3 e
 
 i started making this sometime in august 2025 and it is because of all the support and feedback from  the desmos discord server that im able to continue this project to keep improving it to try to make it better \<3 
 
-especially silostunt who helped make the script.js so that the colors could update automatically using your desmodder primary color which is very cool
+especially silostunt who helped make the original script.js so that the colors could update automatically using your desmodder primary color which is very cool
 
 ## Instructions
 
