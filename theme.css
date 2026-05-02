@@ -1,11 +1,3 @@
-@font-face {
-	font-family: 'mdcg-icons';
-	src:
-		url('https://raw.githack.com/htest-311429731023102/mdcg-project/beta-B/mdcg-icons/mdcg-icons.woff')
-			format('woff'),
-		url('https://raw.githack.com/htest-311429731023102/mdcg-project/beta-B/mdcg-icons/mdcg-icons.woff2')
-			format('woff2');
-}
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
 :root {
