@@ -1415,7 +1415,11 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 .dcg-calculator-api-container-v1_13
 	.dcg-exppanel
 	.dcg-expressionitem
-	.dcg-tab-interior:has(.dcg-circular-icon-container) {
+	.dcg-tab-interior:has(.dcg-circular-icon-container),
+.dcg-calculator-api-container-v1_13
+	.dcg-exppanel
+	.dcg-expressionitem
+	.dcg-tab-interior:has(.dcg-tooltipped-error) {
 	height: 40px;
 }
 .dcg-calculator-api-container-v1_13
