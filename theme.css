@@ -211,7 +211,6 @@ html {
 		background 150ms cubic-bezier(0.31, 0.94, 0.34, 1),
 		border-color 150ms cubic-bezier(0.31, 0.94, 0.34, 1);
 }
-/* TESTING B START */
 .dcg-toggle-view .dcg-toggle-track .dcg-toggle-switch {
 	position: absolute;
 	top: 50%;
@@ -298,7 +297,6 @@ html {
 	color: rgb(var(--md-sys-color-on-primary-container));
 	rotate: 0deg;
 }
-/* TESTING B END */
 .dcg-toggle-view:not(:not(.dcg-disabled):not(.dsm-disabled-toggle))
 	.dcg-toggle-track {
 	background-color: rgba(var(--md-sys-color-surface-variant), 0.1) !important;
@@ -320,6 +318,34 @@ html {
 	background: rgb(var(--md-sys-color-surface)) !important;
 }
 
+.dcg-calculator-api-container-v1_13 .dcg-toast-view .dcg-toast {
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 280px;
+	padding: 4px 8px 4px 16px;
+	color: rgb(var(--md-sys-color-inverse-on-surface));
+	background: rgb(var(--md-sys-color-inverse-surface));
+	border: none;
+	box-shadow: var(--elevation-3);
+}
+.dcg-calculator-api-container-v1_13 .dcg-toast-view .dcg-toast a.dcg-undo {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	text-decoration: none;
+	padding: 10px 12px;
+	margin: 0;
+	border-radius: 20px;
+	color: rgb(var(--md-sys-color-inverse-primary));
+	&.dcg-hovered {
+		background: rgba(var(--md-sys-color-inverse-primary), 0.08);
+	}
+	&.dcg-depressed {
+		background: rgba(var(--md-sys-color-inverse-primary), 0.1);
+	}
+}
+
 .dcg-calculator-api-container-v1_13 .dcg-graph-outer:has(.dcg-graph-inner) {
 	background: white;
 }
@@ -339,7 +365,7 @@ canvas.dcg-graph-inner {
 .dcg-calculator-api-container-v1_13 .dcg-header {
 	height: 64px;
 	padding: 6px 0;
-	background: rgb(var(--md-sys-color-surface-container));
+	background: rgb(var(--md-sys-color-surface));
 	border: none;
 }
 .dcg-calculator-api-container-v1_13 .dcg-header .dcg-header-btn {
@@ -985,9 +1011,6 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	border: none;
 }
 
-.dcg-expressionlist {
-	padding: 12px 0;
-}
 .dcg-calculator-api-container-v1_13 .dcg-exppanel-outer {
 	bottom: 0;
 	height: unset !important;
@@ -1038,6 +1061,10 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	background: none !important;
 	border: none;
 	scrollbar-gutter: stable both-edges;
+}
+.dcg-calculator-api-container-v1_13 .dcg-exppanel.dsm-pinned-expressions {
+	padding-top: 12px;
+	box-shadow: none;
 }
 .dcg-calculator-api-container-v1_13 .dcg-exppanel .dcg-expressionitem {
 	display: flex;
@@ -1103,6 +1130,45 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 .dcg-exppanel .dcg-expressionfolder.dcg-has-items:not(.dcg-collapsed) {
 	border-bottom-left-radius: 0 !important;
 	border-bottom-right-radius: 0 !important;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-expressionitem
+	.dcg-caret-container.dcg-action-toggle-folder-collapsed {
+	display: flex;
+	left: 0;
+	height: 40px;
+	padding: 0;
+	color: rgb(var(--md-sys-color-on-surface-variant));
+	background: rgb(var(--md-sys-color-surface-container));
+	justify-content: center;
+	align-items: center;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-expressionitem.dcg-collapsed
+	.dcg-caret-container.dcg-action-toggle-folder-collapsed {
+	background: rgb(var(--md-sys-color-surface));
+}
+.dcg-calculator-api-container-v1_13 .dcg-expressionitem .dcg-caret-container i {
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	transform: rotate(180deg);
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-expressionitem.dcg-collapsed
+	.dcg-caret-container
+	i {
+	transform: none;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-expressionitem.dcg-expressionfolder
+	.dcg-main
+	textarea.dcg-smart-textarea,
+.dcg-calculator-api-container-v1_13
+	.dcg-expressionitem.dcg-expressionfolder
+	.dcg-main
+	.dcg-displayTextarea {
+	padding: 0 0 12px 32px;
 }
 .dcg-calculator-api-container-v1_13
 	.dcg-expressionitem.dcg-expressionfolder:not(.dcg-collapsed).dcg-has-items
@@ -1795,18 +1861,33 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	~ .dcg-keypad-btn-container
 	.dcg-keypad-btn-content
 	.dcg-mq-math-mode
+	.dcg-mq-root-block,
+.dcg-calculator-api-container-v1_13
+	.dcg-basic-keypad:has(.dcg-keypad-btn[dcg-command='123'])
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn
+	.dcg-keypad-btn-content
+	.dcg-mq-math-mode
+	.dcg-mq-root-block {
+	font-size: 20px;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-basic-keypad:has(.dcg-keypad-btn[dcg-command='ABC'])
+	:nth-child(1 of :not(.dcg-keypad-btn-container))
+	~ .dcg-keypad-btn-container
+	.dcg-keypad-btn-content
+	.dcg-mq-math-mode
 	.dcg-mq-root-block
 	*,
 .dcg-calculator-api-container-v1_13
 	.dcg-basic-keypad:has(.dcg-keypad-btn[dcg-command='123'])
 	.dcg-keypad-btn-container
-	.dcg-keypad-btn:not([dcg-command='a_b']):not([dcg-command='a^b'])
+	.dcg-keypad-btn
 	.dcg-keypad-btn-content
 	.dcg-mq-math-mode
 	.dcg-mq-root-block
 	* {
 	font-family: 'Google Sans', Sans-Serif;
-	font-size: 20px;
 	font-style: normal;
 }
 .dcg-calculator-api-container-v1_13
@@ -1826,6 +1907,12 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	color: rgb(var(--md-sys-color-on-surface-variant));
 	background: rgb(var(--md-sys-color-surface-container-highest));
 	border: none;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-functions-popover
+	.dcg-keypad-btn
+	.dcg-mq-root-block {
+	font-size: 14px !important;
 }
 .dcg-calculator-api-container-v1_13
 	.dcg-basic-keypad:has(.dcg-keypad-btn[dcg-command='123'])
@@ -3181,18 +3268,40 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 
 .dcg-calculator-api-container-v1_13 .dcg-slider {
 	display: grid;
+	gap: 4px;
 	margin: 0;
 	align-content: end;
 	justify-content: space-between;
 }
 .dcg-calculator-api-container-v1_13 .dcg-slider-interior {
-	display: flex;
+	display: grid;
 	align-items: center;
 	grid-row: 2;
 	grid-column: span 2;
 	top: unset;
-	padding: 0 6px;
-	margin: 0;
+	padding: 0;
+	margin: 0 6px;
+
+	@for $i from 0 through 100 {
+		&:has(.dcg-thumb[style='left:#{$i}%']) {
+			--thumb-val: #{$i};
+		}
+		&:has(.dcg-zeroMarker[style='left:#{$i}%']) {
+			--zero-val: #{$i};
+		}
+		@for $d from 0 through 9 {
+			&:has(.dcg-thumb[style^='left:#{$i}.#{$d}']) {
+				--thumb-val: #{$i}.#{$d};
+			}
+			&:has(.dcg-zeroMarker[style^='left:#{$i}.#{$d}']) {
+				--zero-val: #{$i}.#{$d};
+			}
+		}
+	}
+}
+.dcg-calculator-api-container-v1_13 .dcg-slider-interior > * {
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
 }
 .dcg-calculator-api-container-v1_13 .dcg-slider-container .dcg-minLabel,
 .dcg-calculator-api-container-v1_13 .dcg-slider-container .dcg-maxLabel {
@@ -3282,18 +3391,56 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	opacity: 1;
 }
 .dcg-calculator-api-container-v1_13 .dcg-slider-interior .dcg-track {
+	width: -webkit-fill-available;
+	height: 16px;
+	border-radius: 8px;
+	padding: 0 6px;
+	margin: 0 -6px;
 	background: rgb(var(--md-sys-color-secondary-container));
 }
 .dcg-calculator-api-container-v1_13
 	.dcg-expressionitem.dcg-selected
 	.dcg-slider-interior
 	.dcg-track {
-	background: rgb(var(--md-sys-color-secondary));
+	background: rgb(var(--md-sys-color-surface));
 }
-.dcg-calculator-api-container-v1_13 .dcg-slider-interior .dcg-track {
-	height: 16px;
-	border-radius: 8px;
-	padding: 0 6px;
+.dcg-calculator-api-container-v1_13 .dcg-slider-interior .dcg-track::after {
+	content: '';
+	position: absolute;
+	top: 14px;
+	bottom: 14px;
+	left: calc(min(var(--thumb-val), var(--zero-val, 0)) * 1%);
+	right: calc(100% - max(var(--thumb-val), var(--zero-val, 0)) * 1%);
+	background-color: rgb(var(--md-sys-color-primary));
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-slider-interior:has(.dcg-zeroMarker[style*='left:0%'])
+	.dcg-track::after,
+.dcg-calculator-api-container-v1_13
+	.dcg-slider-interior:not(:has(.dcg-zeroMarker))
+	.dcg-track::after {
+	left: -6px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-slider-interior:has(.dcg-zeroMarker[style*='left:100%'])
+	.dcg-track::after,
+.dcg-calculator-api-container-v1_13
+	.dcg-fade-container:has(
+		.dcg-main
+			.dcg-mq-root-block
+			.dcg-mq-binary-operator
+			+ :not(.dcg-mq-digit)
+			+ .dcg-mq-digit
+	)
+	.dcg-expression-bottom
+	.dcg-slider-interior:not(:has(.dcg-zeroMarker))
+	.dcg-track::after {
+	left: calc(min(var(--thumb-val), var(--zero-val, 100)) * 1%);
+	right: -6px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
 }
 .dcg-calculator-api-container-v1_13
 	.dcg-slider-interior
@@ -3357,7 +3504,7 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	width: 20px;
 	height: 18px;
 	background: rgb(var(--md-sys-color-surface));
-	mask: url('data:image/svg+xml,<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 1C18.8954 1 18 1.89543 18 3V15C18 16.1046 18.8954 17 20 17V18H0V17C1.10457 17 2 16.1046 2 15V3C2 1.89543 1.10457 1 0 1V0H20V1Z" fill="%23D9D9D9"/></svg>')
+	mask: url('data:image/svg+xml,<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2v1H0v-1a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2V0h20z" fill="%23d9d9d9"/></svg>')
 		no-repeat center;
 	z-index: -1;
 	transition: all 350ms cubic-bezier(0.27, 1.06, 0.18, 1);
@@ -3367,7 +3514,7 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	.dcg-thumb
 	.dcg-graphic::after {
 	width: 18px;
-	mask: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 1C16.8954 1 16 1.89543 16 3V15C16 16.1046 16.8954 17 18 17V18H0V17C1.10457 17 2 16.1046 2 15V3C2 1.89543 1.10457 1 0 1V0H18V1Z" fill="%23D9D9D9"/></svg>')
+	mask: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2v1H0v-1a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2V0h18z" fill="%23d9d9d9"/></svg>')
 		no-repeat center;
 }
 .dcg-calculator-api-container-v1_13
@@ -3394,7 +3541,35 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 .dcg-calculator-api-container-v1_13
 	.dcg-expressionitem.dcg-selected
 	.dcg-slider-interior
-	.dcg-zeroMarker:not([style='left:0%']):not([style='left:100%'])::after {
+	.dcg-zeroMarker:not([style='left:0%']):not([style='left:100%'])::after,
+.dcg-calculator-api-container-v1_13
+	.dcg-slider-interior:has(.dcg-zeroMarker[style*='left:0%'])
+	.dcg-track
+	.dcg-ticks::before,
+.dcg-calculator-api-container-v1_13
+	.dcg-slider-interior:has(.dcg-zeroMarker[style*='left:100%'])
+	.dcg-track
+	.dcg-ticks::after,
+.dcg-calculator-api-container-v1_13
+	.dcg-fade-container:has(
+		.dcg-main .dcg-mq-root-block .dcg-mq-binary-operator + .dcg-mq-digit
+	)
+	.dcg-expression-bottom
+	.dcg-slider-interior:not(:has(.dcg-zeroMarker))
+	.dcg-track
+	.dcg-ticks::before,
+.dcg-calculator-api-container-v1_13
+	.dcg-fade-container:has(
+		.dcg-main
+			.dcg-mq-root-block
+			.dcg-mq-binary-operator
+			+ :not(.dcg-mq-digit)
+			+ .dcg-mq-digit
+	)
+	.dcg-expression-bottom
+	.dcg-slider-interior:not(:has(.dcg-zeroMarker))
+	.dcg-track
+	.dcg-ticks::after {
 	background: rgb(var(--md-sys-color-secondary-container));
 }
 .dcg-calculator-api-container-v1_13
@@ -3431,24 +3606,69 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	top: unset;
 	width: 4px;
 	height: 4px;
-	background: rgb(var(--md-sys-color-on-secondary-container));
+	background: color-mix(
+		in srgb,
+		rgb(var(--md-sys-color-secondary-container))
+			calc(
+				clamp(
+						0,
+						(var(--this-tick) - var(--thumb-val)) *
+							(var(--zero-val, 0) - var(--this-tick)) * 999999,
+						1
+					) *
+					100%
+			),
+		rgb(var(--md-sys-color-on-secondary-container))
+	);
 	border-radius: 2px;
+
+	@for $i from 0 through 100 {
+		&[style*='left:#{$i}.'],
+		&[style='left:#{$i}%'] {
+			--this-tick: #{$i};
+		}
+	}
 }
 .dcg-calculator-api-container-v1_13
-	.dcg-slider-interior
+	.dcg-fade-container:has(
+		.dcg-main
+			.dcg-mq-root-block
+			.dcg-mq-binary-operator
+			+ :not(.dcg-mq-digit)
+			+ .dcg-mq-digit
+	)
+	.dcg-expression-bottom
+	.dcg-slider-interior:not(:has(.dcg-zeroMarker))
 	.dcg-track
-	.dcg-ticks::before,
-.dcg-calculator-api-container-v1_13
-	.dcg-slider-interior
-	.dcg-track
-	.dcg-ticks::after {
-	content: '';
-	top: unset;
-	position: absolute;
-	width: 4px;
-	height: 4px;
-	border-radius: 2px;
-	background: rgb(var(--md-sys-color-on-secondary-container));
+	.dcg-ticks
+	.dcg-tick {
+	background: color-mix(
+		in srgb,
+		rgb(var(--md-sys-color-secondary-container))
+			calc(
+				clamp(
+						0,
+						(var(--this-tick) - var(--thumb-val)) *
+							(var(--zero-val, 100) - var(--this-tick)) * 999999,
+						1
+					) *
+					100%
+			),
+		rgb(var(--md-sys-color-on-secondary-container))
+	);
+}
+.dcg-calculator-api-container-v1_13 .dcg-slider-interior .dcg-track .dcg-ticks {
+	&::before,
+	&::after {
+		content: '';
+		top: unset;
+		position: absolute;
+		width: 4px;
+		height: 4px;
+		border-radius: 2px;
+		background: rgb(var(--md-sys-color-on-secondary-container));
+		z-index: 1;
+	}
 }
 .dcg-calculator-api-container-v1_13
 	.dcg-expressionitem.dcg-selected
@@ -3480,14 +3700,17 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	align-items: center;
 	justify-content: center;
 	top: unset;
-	width: 0px;
+	width: 0;
+	margin: 0;
 	background: none;
+	opacity: 1;
 }
 .dcg-calculator-api-container-v1_13
 	.dcg-slider-interior
 	.dcg-zeroMarker:not([style='left:0%']):not([style='left:100%'])::after {
-	width: 9px;
-	mask: url('data:image/svg+xml,<svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1C7.89543 1 7 1.89543 7 3V15C7 16.1046 7.89543 17 9 17V18H0V17C1.10457 17 2 16.1046 2 15V3C2 1.89543 1.10457 1 0 1V0H9V1Z" fill="%23D9D9D9"/></svg>');
+	width: 8px;
+	mask: url('data:image/svg+xml,<svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2v1H0v-1a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2V0h8z" fill="%23d9d9d9"/></svg>')
+		no-repeat center;
 }
 .dcg-calculator-api-container-v1_13
 	.dcg-slider-interior.dcg-disable-slider
@@ -4259,83 +4482,107 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	border-radius: 12px 12px 24px 24px;
 	outline: none;
 }
-.dcg-calculator-api-container-v1_13
-	.dcg-saved-graphs-tile:has([aria-label='Graphing']),
-.dcg-calculator-api-container-v1_13
-	.dcg-graph-list__row:has([aria-label='Graphing']) {
-	--md-sys-color-primary: var(--md-sys-color-primary-graphing);
-	--md-sys-color-on-primary: var(--md-sys-color-on-primary-graphing);
-	--md-sys-color-primary-container: var(
-		--md-sys-color-primary-container-graphing
-	);
-	--md-sys-color-on-primary-container: var(
-		--md-sys-color-on-primary-container-graphing
-	);
-	--md-sys-color-secondary-container: var(
-		--md-sys-color-secondary-container-graphing
-	);
-	--md-sys-color-on-secondary-container: var(
-		--md-sys-color-on-secondary-container-graphing
-	);
-	--md-sys-color-tertiary-container: var(
-		--md-sys-color-tertiary-container-graphing
-	);
-	--md-sys-color-on-tertiary-container: var(
-		--md-sys-color-on-tertiary-container-graphing
-	);
-	--md-sys-color-on-surface-variant: var(
-		--md-sys-color-on-surface-variant-graphing
-	);
-}
-.dcg-calculator-api-container-v1_13
-	.dcg-saved-graphs-tile:has([aria-label='Geometry']),
-.dcg-calculator-api-container-v1_13
-	.dcg-graph-list__row:has([aria-label='Geometry']) {
-	--md-sys-color-primary: var(--md-sys-color-primary-geometry);
-	--md-sys-color-on-primary: var(--md-sys-color-on-primary-geometry);
-	--md-sys-color-primary-container: var(
-		--md-sys-color-primary-container-geometry
-	);
-	--md-sys-color-on-primary-container: var(
-		--md-sys-color-on-primary-container-geometry
-	);
-	--md-sys-color-secondary-container: var(
-		--md-sys-color-secondary-container-geometry
-	);
-	--md-sys-color-on-secondary-container: var(
-		--md-sys-color-on-secondary-container-geometry
-	);
-	--md-sys-color-tertiary-container: var(
-		--md-sys-color-tertiary-container-geometry
-	);
-	--md-sys-color-on-tertiary-container: var(
-		--md-sys-color-on-tertiary-container-geometry
-	);
-	--md-sys-color-on-surface-variant: var(
-		--md-sys-color-on-surface-variant-geometry
-	);
-}
-.dcg-calculator-api-container-v1_13
-	.dcg-saved-graphs-tile:has([aria-label='3D']),
-.dcg-calculator-api-container-v1_13
-	.dcg-graph-list__row:has([aria-label='3D']) {
-	--md-sys-color-primary: var(--md-sys-color-primary-3d);
-	--md-sys-color-on-primary: var(--md-sys-color-on-primary-3d);
-	--md-sys-color-primary-container: var(--md-sys-color-primary-container-3d);
-	--md-sys-color-on-primary-container: var(
-		--md-sys-color-on-primary-container-3d
-	);
-	--md-sys-color-secondary-container: var(
-		--md-sys-color-secondary-container-3d
-	);
-	--md-sys-color-on-secondary-container: var(
-		--md-sys-color-on-secondary-container-3d
-	);
-	--md-sys-color-tertiary-container: var(--md-sys-color-tertiary-container-3d);
-	--md-sys-color-on-tertiary-container: var(
-		--md-sys-color-on-tertiary-container-3d
-	);
-	--md-sys-color-on-surface-variant: var(--md-sys-color-on-surface-variant-3d);
+
+.dcg-calculator-api-container-v1_13 .dcg-saved-graphs-tile,
+.dcg-calculator-api-container-v1_13 .dcg-graph-list__row {
+	&:has([aria-label='Graphing']) {
+		--md-sys-color-primary: var(--md-sys-color-primary-graphing);
+		--md-sys-color-on-primary: var(--md-sys-color-on-primary-graphing);
+		--md-sys-color-primary-container: var(
+			--md-sys-color-primary-container-graphing
+		);
+		--md-sys-color-on-primary-container: var(
+			--md-sys-color-on-primary-container-graphing
+		);
+		--md-sys-color-secondary-container: var(
+			--md-sys-color-secondary-container-graphing
+		);
+		--md-sys-color-on-secondary-container: var(
+			--md-sys-color-on-secondary-container-graphing
+		);
+		--md-sys-color-tertiary-container: var(
+			--md-sys-color-tertiary-container-graphing
+		);
+		--md-sys-color-on-tertiary-container: var(
+			--md-sys-color-on-tertiary-container-graphing
+		);
+		--md-sys-color-on-surface-variant: var(
+			--md-sys-color-on-surface-variant-graphing
+		);
+	}
+	&:has([aria-label='Geometry']) {
+		--md-sys-color-primary: var(--md-sys-color-primary-geometry);
+		--md-sys-color-on-primary: var(--md-sys-color-on-primary-geometry);
+		--md-sys-color-primary-container: var(
+			--md-sys-color-primary-container-geometry
+		);
+		--md-sys-color-on-primary-container: var(
+			--md-sys-color-on-primary-container-geometry
+		);
+		--md-sys-color-secondary-container: var(
+			--md-sys-color-secondary-container-geometry
+		);
+		--md-sys-color-on-secondary-container: var(
+			--md-sys-color-on-secondary-container-geometry
+		);
+		--md-sys-color-tertiary-container: var(
+			--md-sys-color-tertiary-container-geometry
+		);
+		--md-sys-color-on-tertiary-container: var(
+			--md-sys-color-on-tertiary-container-geometry
+		);
+		--md-sys-color-on-surface-variant: var(
+			--md-sys-color-on-surface-variant-geometry
+		);
+	}
+	&:has([aria-label='3D']) {
+		--md-sys-color-primary: var(--md-sys-color-primary-3d);
+		--md-sys-color-on-primary: var(--md-sys-color-on-primary-3d);
+		--md-sys-color-primary-container: var(--md-sys-color-primary-container-3d);
+		--md-sys-color-on-primary-container: var(
+			--md-sys-color-on-primary-container-3d
+		);
+		--md-sys-color-secondary-container: var(
+			--md-sys-color-secondary-container-3d
+		);
+		--md-sys-color-on-secondary-container: var(
+			--md-sys-color-on-secondary-container-3d
+		);
+		--md-sys-color-tertiary-container: var(
+			--md-sys-color-tertiary-container-3d
+		);
+		--md-sys-color-on-tertiary-container: var(
+			--md-sys-color-on-tertiary-container-3d
+		);
+		--md-sys-color-on-surface-variant: var(
+			--md-sys-color-on-surface-variant-3d
+		);
+	}
+	&:has([aria-label='Notebook']) {
+		--md-sys-color-primary: var(--md-sys-color-primary-notebook);
+		--md-sys-color-on-primary: var(--md-sys-color-on-primary-notebook);
+		--md-sys-color-primary-container: var(
+			--md-sys-color-primary-container-notebook
+		);
+		--md-sys-color-on-primary-container: var(
+			--md-sys-color-on-primary-container-notebook
+		);
+		--md-sys-color-secondary-container: var(
+			--md-sys-color-secondary-container-notebook
+		);
+		--md-sys-color-on-secondary-container: var(
+			--md-sys-color-on-secondary-container-notebook
+		);
+		--md-sys-color-tertiary-container: var(
+			--md-sys-color-tertiary-container-notebook
+		);
+		--md-sys-color-on-tertiary-container: var(
+			--md-sys-color-on-tertiary-container-notebook
+		);
+		--md-sys-color-on-surface-variant: var(
+			--md-sys-color-on-surface-variant-notebook
+		);
+	}
 }
 .dcg-calculator-api-container-v1_13 .dcg-saved-graphs-tile,
 .dcg-calculator-api-container-v1_13 .dcg-folder {
@@ -4532,31 +4779,45 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	right: 0px;
 	box-shadow: 0 0 0 2px rgb(var(--md-sys-color-inverse-surface));
 }
-.dcg-calculator-api-container-v1_13
-	.dcg-shared-product-icon.dcg-icon-assessment-graphing,
-.dcg-calculator-api-container-v1_13
-	.dcg-shared-product-icon[aria-label='Graphing'],
-.dcg-calculator-api-container-v1_13
-	.dcg-product-filter__product-icon.dcg-icon-graphing {
-	color: rgb(var(--md-sys-color-on-primary-container-graphing)) !important;
-	background: rgb(var(--md-sys-color-primary-container-graphing)) !important;
+.dcg-calculator-api-container-v1_13 .dcg-shared-product-icon {
+	&.dcg-icon-assessment-graphing,
+	&[aria-label='Graphing'] {
+		color: rgb(var(--md-sys-color-on-primary-container-graphing)) !important;
+		background: rgb(var(--md-sys-color-primary-container-graphing)) !important;
+	}
+	&.dcg-icon-assessment-geometry,
+	&[aria-label='Geometry'] {
+		color: rgb(var(--md-sys-color-on-primary-container-geometry)) !important;
+		background: rgb(var(--md-sys-color-primary-container-geometry)) !important;
+	}
+	&.dcg-icon-assessment-3d,
+	&[aria-label='3D'] {
+		color: rgb(var(--md-sys-color-on-primary-container-3d)) !important;
+		background: rgb(var(--md-sys-color-primary-container-3d)) !important;
+	}
+	&.dcg-icon-assessment-notebook,
+	&[aria-label='Notebook'] {
+		color: rgb(var(--md-sys-color-on-primary-container-notebook)) !important;
+		background: rgb(var(--md-sys-color-primary-container-notebook)) !important;
+	}
 }
-.dcg-calculator-api-container-v1_13
-	.dcg-shared-product-icon.dcg-icon-assessment-geometry,
-.dcg-calculator-api-container-v1_13
-	.dcg-shared-product-icon[aria-label='Geometry'],
-.dcg-calculator-api-container-v1_13
-	.dcg-product-filter__product-icon.dcg-icon-geometry {
-	color: rgb(var(--md-sys-color-on-primary-container-geometry)) !important;
-	background: rgb(var(--md-sys-color-primary-container-geometry)) !important;
-}
-.dcg-calculator-api-container-v1_13
-	.dcg-shared-product-icon.dcg-icon-assessment-3d,
-.dcg-calculator-api-container-v1_13 .dcg-shared-product-icon[aria-label='3D'],
-.dcg-calculator-api-container-v1_13
-	.dcg-product-filter__product-icon.dcg-icon-3d {
-	color: rgb(var(--md-sys-color-on-primary-container-3d)) !important;
-	background: rgb(var(--md-sys-color-primary-container-3d)) !important;
+.dcg-calculator-api-container-v1_13 .dcg-product-filter__product-icon {
+	&.dcg-icon-graphing {
+		color: rgb(var(--md-sys-color-on-primary-container-graphing)) !important;
+		background: rgb(var(--md-sys-color-primary-container-graphing)) !important;
+	}
+	&.dcg-icon-geometry {
+		color: rgb(var(--md-sys-color-on-primary-container-geometry)) !important;
+		background: rgb(var(--md-sys-color-primary-container-geometry)) !important;
+	}
+	&.dcg-icon-3d {
+		color: rgb(var(--md-sys-color-on-primary-container-3d)) !important;
+		background: rgb(var(--md-sys-color-primary-container-3d)) !important;
+	}
+	&.dcg-icon-notebook {
+		color: rgb(var(--md-sys-color-on-primary-container-notebook)) !important;
+		background: rgb(var(--md-sys-color-primary-container-notebook)) !important;
+	}
 }
 .dcg-calculator-api-container-v1_13
 	.dcg-product-filter__option--selected
@@ -4864,6 +5125,47 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 .dcg-calculator-api-container-v1_13
 	.dcg-selected-graphs-actions__icon-btn.dcg-depressed {
 	border-radius: 12px;
+}
+.dcg-calculator-api-container-v1_13 .dcg-graph-list__header-row {
+	display: flex;
+	color: rgb(var(--md-sys-color-on-surface-variant));
+	border: none;
+}
+.dcg-calculator-api-container-v1_13 .dcg-graph-list__header-cell--name {
+	flex: 1;
+}
+.dcg-calculator-api-container-v1_13 .dcg-graph-list__header-cell--thumbnail {
+	display: none;
+}
+.dcg-calculator-api-container-v1_13 .dcg-graph-list tbody {
+	display: flex;
+	flex-direction: column;
+}
+.dcg-calculator-api-container-v1_13 .dcg-graph-list__row {
+	display: flex;
+	align-items: center;
+	height: fit-content;
+	padding: 10px 16px;
+	margin: 1px;
+	border-radius: 4px;
+	background: rgb(var(--md-sys-color-surface));
+	border: none;
+}
+.dcg-calculator-api-container-v1_13 .dcg-open-graph-link-wrapper,
+.dcg-calculator-api-container-v1_13
+	.dcg-graph-list__checkbox-container
+	.dcg-checkbox {
+	height: fit-content;
+}
+.dcg-calculator-api-container-v1_13 .dcg-graph-list__graph-title {
+	flex: 1;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-graph-list__row-cell.dcg-graph-list__thumbnail-cell {
+	order: -1;
+}
+.dcg-calculator-api-container-v1_13 .dcg-graph-list__thumbnail-container {
+	height: 56px;
 }
 
 /* CREDITS TO @silostunt */
@@ -6412,8 +6714,15 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	.dcg-expressionitem.dcg-expressiontable
 	.dcg-table-container
 	.dcg-table-sliding-container {
+	width: 100%;
 	padding: 0;
-	margin-bottom: -1px;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-expressionitem.dcg-expressiontable
+	.dcg-tabledata {
+	grid-template-columns:
+		repeat(calc(var(--dcg-column-count) - 1), max-content)
+		1fr;
 }
 .dcg-calculator-api-container-v1_13
 	.dcg-expressionitem.dcg-expressiontable
@@ -6449,7 +6758,7 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	.dcg-expressionitem.dcg-expressiontable
 	.dcg-row:nth-child(even)
 	+ .dcg-show-more-row {
-	background: rgba(var(--md-sys-color-surface-container-high), 0.1);
+	background: rgba(var(--md-sys-color-outline-variant), 0.1);
 }
 .dcg-calculator-api-container-v1_13
 	.dcg-expressionitem.dcg-expressiontable
@@ -6522,4 +6831,452 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	.dcg-mq-math-mode {
 	font-size: 16px;
 	padding: 0;
+}
+
+.dcg-calculator-api-container-v1_13 .dcg-notebook-main {
+	background: rgb(var(--md-sys-color-surface));
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-view {
+	max-width: unset;
+	height: -webkit-fill-available;
+	padding: 0;
+	margin: 48px 12px 8px 8px;
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-header {
+	position: absolute;
+	align-items: center;
+	top: 0;
+	left: 12px;
+	right: 12px;
+	height: 40px;
+	padding: 4px;
+	border-radius: 20px;
+	background: rgb(var(--md-sys-color-surface-container));
+	border: none;
+	z-index: 1;
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-header .dcg-icon-btn,
+.dcg-calculator-api-container-v1_13 .dcg-notebook-header .dcg-preview-button {
+	display: flex;
+	align-items: center;
+	min-width: 32px;
+	height: 32px;
+	line-height: 20px;
+	font-weight: 500;
+	border-radius: 16px;
+	color: rgb(var(--md-sys-color-on-surface));
+	background: none;
+	i {
+		font-size: 20px;
+	}
+	&.dcg-hovered {
+		color: rgb(var(--md-sys-color-on-surface));
+		background: rgba(var(--md-sys-color-on-surface), 0.08);
+	}
+	&.dcg-depressed {
+		color: rgb(var(--md-sys-color-on-surface));
+		background: rgba(var(--md-sys-color-on-surface), 0.1);
+	}
+	&.dcg-active {
+		color: rgb(var(--md-sys-color-on-secondary-container));
+		background: rgb(var(--md-sys-color-secondary-container));
+	}
+	&.dcg-disabled,
+	&[disabled] {
+		color: rgba(var(--md-sys-color-on-surface), 0.38);
+		opacity: 1;
+	}
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-header .dcg-preview-button {
+	font-size: 14px;
+	padding: 6px 12px;
+	background: rgb(var(--md-sys-color-surface));
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-header .dcg-icon-btn {
+	padding: 6px;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-header
+	.dcg-undo-redo-buttons {
+	align-items: center;
+	height: 20px;
+	padding-right: 4px;
+	margin: 6px 4px;
+	border-right: 1px solid rgb(var(--md-sys-color-outline-variant));
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-header
+	.dcg-undo-redo-buttons
+	.dcg-icon-btn {
+	height: 32px;
+	padding: 6px 10px;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-header
+	.dcg-undo-redo-buttons
+	.dcg-action-redo {
+	margin-left: 12px;
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-header .dcg-button-group {
+	gap: 0;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-header
+	.dcg-icon-btn
+	i.dcg-icon-bold,
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-header
+	.dcg-icon-btn
+	i.dcg-icon-italics,
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-header
+	.dcg-preview-button
+	i.dcg-icon-bold,
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-header
+	.dcg-preview-button
+	i.dcg-icon-italics {
+	font-size: 20px;
+	position: relative;
+	top: unset;
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-sidebar {
+	margin: 48px 8px 8px 12px;
+}
+.dcg-calculator-api-container-v1_13 .dcg-command-palette-container {
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	left: 126px;
+	width: 20%;
+	margin: 4px;
+}
+.dcg-calculator-api-container-v1_13 .dcg-command-palette-view input,
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-view.dcg-command-palette-view--active
+	input,
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-view.dcg-command-palette-view--active
+	input.dcg-hovered {
+	height: 32px;
+	border-radius: 16px;
+	background: rgb(var(--md-sys-color-surface-container-lowest));
+	border: none;
+	box-shadow: none;
+	&.dcg-hovered {
+		border: none;
+		box-shadow: none;
+	}
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-view
+	input::placeholder {
+	font-size: 14px;
+	color: rgb(var(--md-sys-color-on-surface-variant));
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-view
+	i.dcg-command-palette-search-icon {
+	top: 6px;
+	left: 6px;
+	font-size: 20px;
+	color: rgb(var(--md-sys-color-on-surface));
+	opacity: 1;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-view
+	.dcg-keyboard-shortcut__key {
+	width: fit-content;
+	height: 24px;
+	padding: 0 8px;
+	margin: -2px 0;
+	border-radius: 8px;
+	color: rgb(var(--md-sys-color-on-tertiary));
+	background: rgb(var(--md-sys-color-tertiary));
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-view
+	.dcg-command-palette-input-container
+	.dcg-keyboard-shortcut,
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-input-container
+	.dcg-keyboard-shortcut
+	.dcg-keyboard-shortcut__key {
+	top: 6px;
+	right: 6px;
+	height: 20px;
+	width: 20px;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 2px;
+	color: rgb(var(--md-sys-color-on-surface-variant));
+	background: none;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-view.dcg-command-palette-view--active {
+	background: none;
+	box-shadow: none;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-view
+	.dcg-command-palette-scrollable {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	padding: 11px 0 11px 11px;
+	margin: -11px;
+	overflow-x: clip;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-view
+	.dcg-command-palette-section {
+	padding: 2px 0;
+	border-radius: 8px;
+	background: rgb(var(--md-sys-color-surface-container-low));
+	box-shadow: var(--elevation-3);
+	&:nth-child(1 of .dcg-command-palette-section) {
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+	}
+	&:nth-last-child(1 of .dcg-command-palette-section) {
+		border-bottom-left-radius: 16px;
+		border-bottom-right-radius: 16px;
+	}
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-view
+	.dcg-command-palette-command.dcg-command-palette-command.dcg-command-palette-command {
+	width: -webkit-fill-available;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	padding: 12px;
+	margin: 2px 4px;
+	border-radius: 4px;
+	color: rgb(var(--md-sys-color-on-surface));
+	&.dcg-hovered {
+		background: rgba(var(--md-sys-color-on-surface), 0.08);
+	}
+	&.dcg-depressed {
+		background: rgba(var(--md-sys-color-on-surface), 0.1);
+	}
+	&.dcg-command-palette-command__selected {
+		border-radius: 12px;
+		color: rgb(var(--md-sys-color-on-tertiary-container));
+		background: rgb(var(--md-sys-color-tertiary-container));
+	}
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-view
+	.dcg-command-palette-section:nth-child(1 of .dcg-command-palette-section)
+	.dcg-command-palette-listitem:first-child
+	.dcg-command-palette-command.dcg-command-palette-command.dcg-command-palette-command {
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-command-palette-view
+	.dcg-command-palette-section:nth-last-child(1 of .dcg-command-palette-section)
+	.dcg-command-palette-listitem:last-child
+	.dcg-command-palette-command.dcg-command-palette-command.dcg-command-palette-command {
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-view .dcg-notebook-content {
+	border-radius: 24px;
+	background: rgb(var(--md-sys-color-surface-container-lowest));
+	border: none;
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-view .dcg-notebook-row {
+	gap: 12px;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-cell-wrapper[data-cell-type='graph-cell'],
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-cell-wrapper[data-cell-type='expression-cell'],
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-cell-wrapper[data-cell-type='slider-cell'] {
+	margin: 6px 0;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-view:not(.dcg-notebook-view--preview-mode)
+	.dcg-focus-inside-row.dcg-notebook-row--multi-column:before,
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-view:not(.dcg-notebook-view--preview-mode)
+	.dcg-focus-inside-row.dcg-notebook-row--multi-column
+	.dcg-notebook-column:not(:first-of-type):after {
+	content: none;
+}
+.dcg-calculator-api-container-v1_13 .dcg-prosemirror-view .ProseMirror p {
+	display: flex;
+	align-items: center;
+	color: rgb(var(--md-sys-color-on-surface));
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-prosemirror-view
+	.ProseMirror
+	.dcg-pm-mathquill-node
+	.dcg-math-field.dcg-mq-focused {
+	border-radius: 4px;
+	color: rgb(var(--md-sys-color-on-secondary-container));
+	background: rgb(var(--md-sys-color-secondary-container));
+	border: 1px solid transparent;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-cell-wrapper
+	.dcg-notebook-cell {
+	gap: 4px;
+	border-radius: 12px;
+	box-shadow: none;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-view:not(.dcg-notebook-view--preview-mode)
+	.dcg-notebook-cell-selected--single-cell:not([data-cell-type='text-cell'])
+	.dcg-notebook-cell {
+	border-radius: 12px;
+	background: rgb(var(--md-sys-color-secondary-container));
+	box-shadow: none;
+	.dcg-notebook-cell-drag-handle {
+		background: none;
+		& > * {
+			color: rgb(var(--md-sys-color-secondary));
+		}
+	}
+	.dcg-notebook-cell-content {
+		background: rgb(var(--md-sys-color-on-secondary));
+		.dcg-math-field {
+			color: rgb(var(--md-sys-color-on-secondary-container));
+		}
+	}
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-cell-drag-handle {
+	width: 40px;
+	border-radius: 12px;
+	background: rgb(var(--md-sys-color-surface-container));
+	border: none;
+	& > * {
+		color: rgb(var(--md-sys-color-on-surface-variant));
+		opacity: 1;
+	}
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-cell-wrapper
+	.dcg-notebook-cell-content {
+	border-radius: 12px;
+	background: rgb(var(--md-sys-color-surface));
+	border: none;
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-token {
+	padding: 0 4px;
+	margin: 2px;
+	border-radius: 4px;
+	color: color-mix(
+		in srgb,
+		var(--dcg-token-color) 10%,
+		rgb(var(--md-sys-color-on-surface))
+	);
+	background: color-mix(
+		in srgb,
+		var(--dcg-token-color) 10%,
+		rgb(var(--md-sys-color-surface))
+	);
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-sidebar {
+	gap: 8px;
+	margin: 48px 0 8px 12px;
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-sidebar-section {
+	border-radius: 24px;
+	background: rgb(var(--md-sys-color-surface-container-low));
+	border: none;
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-sidebar-section--header {
+	padding: 12px;
+	color: rgb(var(--md-sys-color-on-surface-variant));
+	background: none;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-sidebar-section--header--toggleable:not(
+		[aria-expanded='true']
+	) {
+	color: rgb(var(--md-sys-color-on-surface-variant));
+	background: none;
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-sidebar-section--contents {
+	border-radius: 16px;
+	background: rgb(var(--md-sys-color-surface-container-low));
+}
+.dcg-calculator-api-container-v1_13 .dcg-notebook-variables-dropdown {
+	display: grid;
+	grid-template-areas:
+		'color color'
+		'. .';
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-variables-dropdown
+	.dcg-color-picker-container {
+	grid-area: color;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-variables-dropdown
+	.dcg-notebook-variables-dropdown-action {
+	height: 40px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	padding: 10px 16px;
+	border-radius: 20px;
+	color: rgb(var(--md-sys-color-on-primary));
+	background: rgb(var(--md-sys-color-primary));
+	border: none;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-expression-list
+	.dcg-container
+	.dcg-exppanel-outer {
+	border-radius: 24px;
+	box-shadow: none;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-expression-list
+	.dcg-exppanel-container {
+	padding-top: 12px;
+	background: rgb(var(--md-sys-color-surface-container-lowest));
+	border: none;
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-expression-list
+	.dcg-container
+	.dcg-exppanel-outer
+	.dcg-expression-top-bar,
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-expression-list
+	.dcg-container
+	.dcg-exppanel-outer
+	.dcg-expression-top-bar
+	> * {
+	background: rgb(var(--md-sys-color-surface-container-low));
+}
+.dcg-calculator-api-container-v1_13 .dcg-add-notebook-variable {
+	padding-left: 12px;
+	border-radius: 6px;
+	color: rgb(var(--md-sys-color-on-surface));
+	background: rgb(var(--md-sys-color-surface));
+	border: none;
+}
+.dcg-calculator-api-container-v1_13 .dcg-add-notebook-variable::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 4px;
+	height: -webkit-fill-available;
+	margin: 4px;
+	border-radius: 2px;
+	background: var(--dcg-token-color, #e0e1e2);
+}
+.dcg-calculator-api-container-v1_13
+	.dcg-notebook-cell--graph
+	.dcg-notebook-cell-content {
+	border: none;
 }
