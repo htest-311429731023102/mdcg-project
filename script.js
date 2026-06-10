@@ -111,4 +111,5 @@ const variant = 'dark'; // 'light', 'light-mc', 'light-hc', 'dark', 'dark-mc', '
 	setTheme('#358f3c', variant, '-graphing');
 	setTheme('#530d82', variant, '-geometry');
 	setTheme('#bd469b', variant, '-3d');
+	setTheme('#216fe9', variant, '-notebook');
 })();
